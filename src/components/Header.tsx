@@ -2,6 +2,7 @@
 import React from 'react';
 import { Cat, Plus, Minus } from 'lucide-react';
 import { Button } from './ui/button';
+import { Input } from './ui/input';
 
 interface HeaderProps {
   points?: number;
@@ -20,16 +21,16 @@ const Header: React.FC<HeaderProps> = ({ points = 0, username = "" }) => {
           </div>
         </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <div className="text-sm text-fitness-muted">{username || "Gjest"}</div>
           
-          <div className="relative flex items-center">
-            <input 
+          <div className="flex items-center gap-2">
+            <Input 
               type="text" 
-              placeholder="Brukernavn" 
-              className="fitness-input w-36"
+              placeholder="Brukernavn"
+              className="w-28 h-9 text-sm"
             />
-            <Button className="absolute right-0 top-0 bottom-0 rounded-l-none" variant="default">
+            <Button size="sm" className="h-9">
               Hent
             </Button>
           </div>
