@@ -1,17 +1,16 @@
-
 import React from 'react';
 import { Cat, Plus, Minus } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-
 interface HeaderProps {
   points?: number;
   username?: string;
 }
-
-const Header: React.FC<HeaderProps> = ({ points = 0, username = "" }) => {
-  return (
-    <header className="bg-white shadow-sm py-4 mb-8">
+const Header: React.FC<HeaderProps> = ({
+  points = 0,
+  username = ""
+}) => {
+  return <header className="bg-white shadow-sm py-4 mb-8">
       <div className="fitness-container flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Cat className="h-8 w-8 text-fitness-primary" />
@@ -22,14 +21,10 @@ const Header: React.FC<HeaderProps> = ({ points = 0, username = "" }) => {
         </div>
         
         <div className="flex items-center gap-3">
-          <div className="text-sm text-fitness-muted">{username || "Gjest"}</div>
+          
           
           <div className="flex items-center gap-2">
-            <Input 
-              type="text" 
-              placeholder="Brukernavn"
-              className="w-28 h-9 text-sm"
-            />
+            <Input type="text" placeholder="Brukernavn" className="w-28 h-9 text-sm" />
             <Button size="sm" className="h-9">
               Hent
             </Button>
@@ -44,8 +39,6 @@ const Header: React.FC<HeaderProps> = ({ points = 0, username = "" }) => {
           </div>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
