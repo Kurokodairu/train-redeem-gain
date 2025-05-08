@@ -32,14 +32,14 @@ const Header: React.FC<HeaderProps> = ({ points = 0, username = "" }) => {
             <Button className="absolute right-0 top-0 bottom-0 rounded-l-none" variant="default">
               Hent
             </Button>
-            <div className="flex flex-col ml-2">
-              <Button size="icon" variant="outline" className="p-0 h-7 w-7 mb-1">
-                <Plus className="h-3 w-3" />
-              </Button>
-              <Button size="icon" variant="outline" className="p-0 h-7 w-7">
-                <Minus className="h-3 w-3" />
-              </Button>
-            </div>
+          </div>
+          <div className="flex flex-col ml-2">
+            <Button size="icon" variant="outline" className="p-0 h-7 w-7 mb-1">
+              <Plus className="h-3 w-3" />
+            </Button>
+            <Button size="icon" variant="outline" className="p-0 h-7 w-7">
+              <Minus className="h-3 w-3" />
+            </Button>
           </div>
         </div>
       </div>
